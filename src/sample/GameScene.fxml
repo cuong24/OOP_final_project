@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<?import java.util.ArrayList?>
+<Pane fx:id="map" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="2.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="101.0" prefWidth="1076.0">
+               <children>
+                  <Label text="Activity Feed: " />
+                  <TextField prefHeight="71.0" prefWidth="719.0" />
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER" prefHeight="580.0" prefWidth="1060.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="240.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="240.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="240.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="240.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="240.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="240.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <Circle fx:id="path1" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 5;" />
+                              <Circle fx:id="path2" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path3" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path4" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path5" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path11" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path10" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path9" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path8" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path7" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path6" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-style: solid; -fx-border-width: 3;">
+                                 <children>
+                                    <Circle fx:id="cage1" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 5;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <GridPane rotate="90.0" GridPane.columnIndex="3">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <Circle fx:id="path37" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 5;" />
+                              <Circle fx:id="path38" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path39" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path40" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path41" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path47" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path46" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path45" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path44" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path43" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path42" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-style: solid; -fx-border-width: 3;">
+                                 <children>
+                                    <Circle fx:id="cage4" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 5;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <GridPane rotate="270.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <Circle fx:id="path13" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 5;" />
+                              <Circle fx:id="path14" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path15" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path16" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path17" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path23" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path22" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path21" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path20" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path19" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path18" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-style: solid; -fx-border-width: 3;">
+                                 <children>
+                                    <Circle fx:id="cage2" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 5;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <GridPane rotate="180.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <Circle fx:id="path25" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 5;" />
+                              <Circle fx:id="path26" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path27" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path28" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path29" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path35" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path34" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path33" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path32" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                              <Circle fx:id="path31" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Circle fx:id="path30" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-style: solid; -fx-border-width: 3;">
+                                 <children>
+                                    <Circle fx:id="cage3" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 5;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="1.5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: green;" text="6" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: green;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: green;" text="4" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: green;" text="3" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: green;" text="2" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: green;" text="1" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" prefWidth="20.0">
+                           <children>
+                              <Circle fx:id="path24" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: green; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" rotate="180.0" spacing="1.5" GridPane.columnIndex="2">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: blue;" text="6" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: blue;" text="5" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: blue;" text="4" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: blue;" text="3" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: blue;" text="2" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: blue;" text="1" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" prefWidth="20.0" rotate="90.0">
+                           <children>
+                              <Circle fx:id="path48" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: blue; -fx-stroke-width: 2;" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox maxWidth="-Infinity" prefHeight="240.0" prefWidth="100.0" rotate="90.0" spacing="1.5">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: orange;" text="6" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: orange;" text="5" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: orange;" text="4" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: orange;" text="3" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: orange;" text="2" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: orange;" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" maxHeight="20.0" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" rotate="180.0">
+                                 <children>
+                                    <Circle fx:id="path12" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: orange; -fx-stroke-width: 2;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="2.0" right="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="240.0" rotate="180.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <VBox maxWidth="-Infinity" prefHeight="240.0" prefWidth="100.0" rotate="90.0" spacing="1.5">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: red;" text="6" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: red;" text="5" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: red;" text="4" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: red;" text="3" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: red;" text="2" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="20.0" prefWidth="118.0" style="-fx-background-color: red;" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" prefWidth="20.0" rotate="180.0">
+                                 <children>
+                                    <Circle fx:id="path36" fill="WHITE" radius="20.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: red; -fx-stroke-width: 2;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="2.0" right="2.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Player 1" textFill="#1500ff">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="178.0" spacing="10.0">
+                           <children>
+                              <Label text="Score:" textFill="#1500ff">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="0" textFill="#1500ff">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="button1" mnemonicParsing="false" onAction="#rollDice" text="Roll Dice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="162.0" text="Dice" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
+                     <children>
+                        <Label text="Player 2" textFill="RED">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="178.0" spacing="10.0">
+                           <children>
+                              <Label text="Score:" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="0" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" text="Roll Dice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Player 3" textFill="#ff7b00">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="178.0" spacing="10.0">
+                           <children>
+                              <Label text="Score:" textFill="#ff7b00">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="0" textFill="#ff7b00">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" text="Roll Dice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Player 4" textFill="#22913a">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="178.0" spacing="10.0">
+                           <children>
+                              <Label text="Score:" textFill="#22913a">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label text="0" textFill="#22913a">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" text="Roll Dice">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <fx:define>
+                  <ArrayList fx:id="path">
+                     <fx:reference source="path1" />
+                     <fx:reference source="path2" />
+                     <fx:reference source="path3" />
+                     <fx:reference source="path4" />
+                     <fx:reference source="path5" />
+                     <fx:reference source="path6" />
+                     <fx:reference source="path7" />
+                     <fx:reference source="path8" />
+                     <fx:reference source="path9" />
+                     <fx:reference source="path10" />
+                     <fx:reference source="path11" />
+                     <fx:reference source="path12" />
+                     <fx:reference source="path13" />
+                     <fx:reference source="path14" />
+                     <fx:reference source="path15" />
+                     <fx:reference source="path16" />
+                     <fx:reference source="path17" />
+                     <fx:reference source="path18" />
+                     <fx:reference source="path19" />
+                     <fx:reference source="path20" />
+                     <fx:reference source="path21" />
+                     <fx:reference source="path22" />
+                     <fx:reference source="path23" />
+                     <fx:reference source="path24" />
+                     <fx:reference source="path25" />
+                     <fx:reference source="path26" />
+                     <fx:reference source="path27" />
+                     <fx:reference source="path28" />
+                     <fx:reference source="path29" />
+                     <fx:reference source="path30" />
+                     <fx:reference source="path31" />
+                     <fx:reference source="path32" />
+                     <fx:reference source="path33" />
+                     <fx:reference source="path34" />
+                     <fx:reference source="path35" />
+                     <fx:reference source="path36" />
+                     <fx:reference source="path37" />
+                     <fx:reference source="path38" />
+                     <fx:reference source="path39" />
+                     <fx:reference source="path40" />
+                     <fx:reference source="path41" />
+                     <fx:reference source="path42" />
+                     <fx:reference source="path43" />
+                     <fx:reference source="path44" />
+                     <fx:reference source="path45" />
+                     <fx:reference source="path46" />
+                     <fx:reference source="path47" />
+                     <fx:reference source="path48" />
+                  </ArrayList>
+               </fx:define>
+            </GridPane>
+         </children>
+      </VBox>
+      <ImageView fx:id="horse1" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse2" fitHeight="36.0" fitWidth="32.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="horse3" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse4" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse5" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse6" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse7" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse8" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse9" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse10" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse11" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse12" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse13" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse14" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse15" fitHeight="40.0" fitWidth="36.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horse16" fitHeight="40.0" fitWidth="36.0" layoutX="-2.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+   </children>
+   <fx:define>
+      <ArrayList fx:id="player1">
+         <fx:reference source="horse1" />
+         <fx:reference source="horse2" />
+         <fx:reference source="horse3" />
+         <fx:reference source="horse4" />
+      </ArrayList>
+   </fx:define>
+   <fx:define>
+      <ArrayList fx:id="player2">
+         <fx:reference source="horse5" />
+         <fx:reference source="horse6" />
+         <fx:reference source="horse7" />
+         <fx:reference source="horse8" />
+      </ArrayList>
+   </fx:define>
+   <fx:define>
+      <ArrayList fx:id="player3">
+         <fx:reference source="horse9" />
+         <fx:reference source="horse10" />
+         <fx:reference source="horse11" />
+         <fx:reference source="horse12" />
+      </ArrayList>
+   </fx:define>
+   <fx:define>
+      <ArrayList fx:id="player4">
+         <fx:reference source="horse13" />
+         <fx:reference source="horse14" />
+         <fx:reference source="horse15" />
+         <fx:reference source="horse16" />
+      </ArrayList>
+   </fx:define>
+</Pane>
